@@ -1,0 +1,8 @@
+(module OSRAM_LED (layer F.Cu) (tedit 5B4EDE21)
+  (fp_text reference REF** (at 0 2) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value OSRAM_LED (at 0 -2) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+)
