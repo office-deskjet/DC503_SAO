@@ -343,9 +343,9 @@ F 3 "" H 8730 1860 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 10630 1590 0    60   ~ 0
-SDA
+ROW1
 Text Label 10630 1790 0    60   ~ 0
-SCL
+ROW3
 Text Label 4480 1520 0    60   ~ 0
 ROW1
 Text Label 4480 1620 0    60   ~ 0
