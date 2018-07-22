@@ -1,4 +1,4 @@
-update=Wed 18 Jul 2018 09:20:00 PM PDT
+update=Sat 21 Jul 2018 04:38:57 PM PDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../../KiCAD/LIB/digikey-kicad-library/digikey-symbols;../../KiCAD/LIB/SAO
+LibDir=../../KiCad/LIB/digikey-kicad-library/digikey-symbols;../../KiCad/LIB/SAO
 [eeschema/libraries]
 LibName1=power
 LibName2=device
