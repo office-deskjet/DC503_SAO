@@ -15,6 +15,7 @@ https://www.youtube.com/watch?v=SKk8s5KAhKs
 
 ## Blogs
 http://www.andrewsowa.com/blog/2017/3/19/creating-the-benchoff-nickel
+https://nitkin.net/2016/3/graphic-copper-kicad
 
 ## Forum
 https://forum.kicad.info/t/how-to-make-no-copper-no-mask-complex-shape/11651/5
