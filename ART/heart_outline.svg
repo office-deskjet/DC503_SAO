@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16mm"
+   height="14.874323mm"
+   viewBox="0 0 56.692913 52.704293"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="heart_outline.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="16"
+     inkscape:cx="43.023363"
+     inkscape:cy="17.393119"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1415"
+     inkscape:window-x="2560"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-bbox="true"
+     inkscape:snap-nodes="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-329.68338,-471.82143)">
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.40204015;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 356.92458,523.26794 C 353.94966,519.13874 350.56846,515.62627 344.01884,509.86119 337.64128,504.24755 335.33408,501.85742 333.31981,498.77752 331.57028,496.10242 330.5337,493.38782 330.05462,490.22669 329.85397,488.90269 329.82981,485.92036 330.01124,484.87245 330.405,482.59818 331.10841,480.73368 332.22241,479.01148 335.97903,473.20381 342.92587,470.67733 349.51124,472.72372 350.52659,473.03923 352.53687,474.02891 353.45695,474.66622 354.93569,475.69049 356.40363,477.17591 357.39298,478.64908 357.69665,479.10127 357.97656,479.47125 358.01499,479.47125 358.05343,479.47125 358.33334,479.10127 358.63702,478.64908 359.62636,477.17591 361.09429,475.69049 362.57303,474.66622 363.49312,474.02891 365.50341,473.03923 366.51875,472.72372 369.27029,471.86867 372.11034,471.7993 374.92476,472.51836 377.76283,473.24345 380.57535,475.00111 382.50416,477.25503 383.68166,478.63099 384.56065,480.10887 385.1911,481.77264 387.0463,486.66855 386.23983,492.80377 383.07507,497.87023 381.05641,501.1019 378.72645,503.54268 371.54149,509.95251 365.45515,515.38221 362.03099,519.0254 359.23766,523.04331 358.37961,524.27755 358.33465,524.3247 358.01638,524.3247 357.70311,524.3247 357.64636,524.26977 356.92458,523.26794 Z"
+       id="path4225"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssssssssssssssssss" />
+  </g>
+</svg>
