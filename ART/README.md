@@ -22,9 +22,10 @@ https://www.youtube.com/watch?v=H-Lc91iaH6w
 
 ## Blogs
 http://www.andrewsowa.com/blog/2017/3/19/creating-the-benchoff-nickel  
-https://nitkin.net/2016/3/graphic-copper-kicad
+https://nitkin.net/2016/3/graphic-copper-kicad  
+https://medium.com/@urish/a-practical-guide-to-designing-pcb-art-b5aa22926a5c
 
 ## Forum
-https://forum.kicad.info/t/how-to-make-no-copper-no-mask-complex-shape/11651/5
+https://forum.kicad.info/t/how-to-make-no-copper-no-mask-complex-shape/11651/5  
 https://forum.kicad.info/t/exposed-copper-pour-fill-zones-pour-with-no-solder-mask/2474/14
 
