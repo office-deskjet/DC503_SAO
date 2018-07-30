@@ -16,8 +16,8 @@
 // array of all the LEDs in {ANODE,CATHODE} pairing
 char LED[NUMB_LEDS][2] = { {ROW1, ROW2}, {ROW1, ROW3}, {ROW1, ROW4},
                            {ROW2, ROW1}, {ROW2, ROW3}, {ROW2, ROW4},
-                           {ROW3, ROW2}, {ROW3, ROW4}, {ROW3, ROW1},
-                           {ROW4, ROW3}, {ROW4, ROW2}, {ROW4, ROW1},
+                           {ROW3, ROW1}, {ROW3, ROW2}, {ROW3, ROW4},
+                           {ROW4, ROW1}, {ROW4, ROW2}, {ROW4, ROW3},
 };
 
 void setup()
