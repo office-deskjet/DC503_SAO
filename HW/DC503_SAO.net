@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /work/priv/DC503_SAO/HW/DC503_SAO.sch)
-    (date "Sun 29 Jul 2018 11:25:00 PM PDT")
+    (date "Mon 30 Jul 2018 12:20:15 AM PDT")
     (tool "Eeschema 4.0.7")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -236,16 +236,16 @@
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive)))))
   (libraries
-    (library (logical conn)
-      (uri /usr/share/kicad/library/conn.lib))
     (library (logical device)
       (uri /usr/share/kicad/library/device.lib))
     (library (logical atmel)
       (uri /usr/share/kicad/library/atmel.lib))
-    (library (logical dk_Tactile-Switches)
-      (uri /work/priv/KiCad/LIB/digikey-kicad-library/digikey-symbols/dk_Tactile-Switches.lib))
+    (library (logical conn)
+      (uri /usr/share/kicad/library/conn.lib))
     (library (logical badgelife_shitty_connector)
-      (uri /work/priv/KiCad/LIB/SAO/badgelife_shitty_connector.lib)))
+      (uri /work/priv/KiCad/LIB/SAO/badgelife_shitty_connector.lib))
+    (library (logical dk_Tactile-Switches)
+      (uri /work/priv/KiCad/LIB/digikey-kicad-library/digikey-symbols/dk_Tactile-Switches.lib)))
   (nets
     (net (code 1) (name /ROW2)
       (node (ref D8) (pin 1))
