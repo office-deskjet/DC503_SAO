@@ -22,12 +22,8 @@ char LED[NUMB_LEDS][2] = { {ROW1, ROW2}, {ROW1, ROW3}, {ROW1, ROW4},
 
 void setup()
 {
-  // high Z for all pins
-  pinMode(ROW1, INPUT);
-  pinMode(ROW2, INPUT);
-  pinMode(ROW3, INPUT);
-  pinMode(ROW4, INPUT);
-
+  all_off_led();
+  
   pinMode(BUTTON, INPUT);
   randomSeed(analogRead(BUTTON));
 
@@ -36,8 +32,9 @@ void setup()
 //  pinMode(ROW2, OUTPUT);
 //  pinMode(ROW3, OUTPUT);
 //  digitalWrite(ROW1, HIGH);
+//  digitalWrite(ROW3, HIGH); // Make D2 off
 //  digitalWrite(ROW2, LOW);
-//  digitalWrite(ROW3, HIGH);
+
 
   
   // D2
@@ -47,14 +44,30 @@ void setup()
 //  digitalWrite(ROW3, LOW);
 
 
-// D1
-  pinMode(ROW1, OUTPUT);
+// D3
+//  pinMode(ROW1, OUTPUT);
+//  pinMode(ROW4, OUTPUT);
+//  pinMode(ROW3, OUTPUT);
+//  digitalWrite(ROW1, HIGH);
+//  digitalWrite(ROW3, HIGH); // Make D2 off
+//  digitalWrite(ROW4, LOW);
+
+
+  // D4
   pinMode(ROW2, OUTPUT);
   pinMode(ROW3, OUTPUT);
-  digitalWrite(ROW1, HIGH);
-  digitalWrite(ROW2, LOW);
-  digitalWrite(ROW3, HIGH);
-
+  pinMode(ROW1, OUTPUT);
+  digitalWrite(ROW2, HIGH);
+  digitalWrite(ROW3, HIGH); // Make D5 off
+  digitalWrite(ROW1, LOW);
+  
+ 
+  // D5
+//  pinMode(ROW2, OUTPUT);
+//  pinMode(ROW3, OUTPUT);
+//  digitalWrite(ROW2, HIGH);
+//  digitalWrite(ROW3, LOW);
+ 
   
 }
 
@@ -64,6 +77,16 @@ void loop()
  
 }
 
+// turn off all LEDs
+void all_off_led()
+{
+  // high Z for all pins
+  pinMode(ROW1, INPUT);
+  pinMode(ROW2, INPUT);
+  pinMode(ROW3, INPUT);
+  pinMode(ROW4, INPUT);
+  
+}
 // turn on a given LED, param is a an {ANODE,CATHODE} pair
 void on_led(char *LED)
 {
