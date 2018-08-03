@@ -7,29 +7,17 @@
 #define ROW3 2
 #define ROW4 3
 
-#define SLOW_SPEED 150
-#define MED_SPEED 75
-#define FAST_SPEED 15
+#define SPEED 500
 
 #define BUTTON A2
 
 #define NUMB_LEDS 12
 
-enum states {
-  SLOW_CYCLE,
-  MED_CYCLE,
-  FAST_CYCLE,
-  SLOW_RAND,
-  FAST_RAND
-};
-
-int cur_speed;
-
 // array of all the LEDs in {ANODE,CATHODE} pairing
 char LED[NUMB_LEDS][2] = { {ROW1, ROW2}, {ROW1, ROW3}, {ROW1, ROW4},
                            {ROW2, ROW1}, {ROW2, ROW3}, {ROW2, ROW4},
-                           {ROW3, ROW2}, {ROW3, ROW4}, {ROW3, ROW1},
-                           {ROW4, ROW3}, {ROW4, ROW2}, {ROW4, ROW1},
+                           {ROW3, ROW1}, {ROW3, ROW2}, {ROW3, ROW4},
+                           {ROW4, ROW1}, {ROW4, ROW2}, {ROW4, ROW3},
 };
 
 void setup()
@@ -42,49 +30,39 @@ void setup()
 
   pinMode(BUTTON, INPUT);
   randomSeed(analogRead(BUTTON));
+
+  // D1
+//  pinMode(ROW1, OUTPUT);
+//  pinMode(ROW2, OUTPUT);
+//  pinMode(ROW3, OUTPUT);
+//  digitalWrite(ROW1, HIGH);
+//  digitalWrite(ROW2, LOW);
+//  digitalWrite(ROW3, HIGH);
+
   
-  pinMode(BUTTON, INPUT_PULLUP);
+  // D2
+//  pinMode(ROW1, OUTPUT);
+//  pinMode(ROW3, OUTPUT);
+//  digitalWrite(ROW1, HIGH);
+//  digitalWrite(ROW3, LOW);
+
+
+// D1
+  pinMode(ROW1, OUTPUT);
+  pinMode(ROW2, OUTPUT);
+  pinMode(ROW3, OUTPUT);
+  digitalWrite(ROW1, HIGH);
+  digitalWrite(ROW2, LOW);
+  digitalWrite(ROW3, HIGH);
+
+  
 }
 
 void loop()
 {
-  byte i = 0;
-  states cur_state = SLOW_CYCLE;
-
   
-  
-  
-  switch(cur_state)
-  {
-    case SLOW_CYCLE:
-      cur_speed = SLOW_SPEED;
-      cycle_led();
-    break;
-      
-    case FAST_CYCLE:
-      cur_speed = FAST_SPEED;
-      cycle_led();
-    break;
-
-    case FAST_RAND:
-      cur_speed = FAST_SPEED;
-      random_led();
-    break;
-  }
-
-
-
-  
-#if 0
-  for (i = 0; i < 10; i++)
-    random_led();
-    
- for (i = 0; i < 3; i++)
-    cycle_led();
-#endif
+ 
 }
-
-
 
 // turn on a given LED, param is a an {ANODE,CATHODE} pair
 void on_led(char *LED)
@@ -103,28 +81,28 @@ void off_led(char *LED)
   pinMode(LED[CATHODE], INPUT);
 }
 
-void blink_led(char *LED)
-{
-  on_led(LED);
-  delay(cur_speed);
-  
-  off_led(LED);
-  delay(cur_speed);
-}
-
-
 void cycle_led()
 {
   byte i;
  
   for (i = 0; i < NUMB_LEDS; i++) {
-    blink_led(LED[i]);
+    on_led(LED[i]);
+    delay(SPEED);
+    
+    off_led(LED[i]);
+    delay(SPEED);  
   }
 }
+
 
 void random_led()
 {
   long rand_led = random(0, NUMB_LEDS);
-  blink_led(LED[rand_led]);
+
+  on_led(LED[rand_led]);
+  delay(SPEED);
+  
+  off_led(LED[rand_led]);
+  delay(SPEED);
 }
 

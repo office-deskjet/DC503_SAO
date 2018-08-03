@@ -7,7 +7,7 @@
 #define ROW3 2
 #define ROW4 3
 
-#define SPEED 150
+#define SPEED 500
 
 #define BUTTON A2
 
@@ -36,10 +36,10 @@ void setup()
 void loop()
 {
   byte i = 0;
-
+/*
   for (i = 0; i < 10; i++)
     random_led();
-    
+*/    
  for (i = 0; i < 3; i++)
     cycle_led();
 }
