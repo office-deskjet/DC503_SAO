@@ -77,24 +77,25 @@ void setup()
 //  digitalWrite(ROW4, LOW);
 
   // D7 no worky
-//  pinMode(ROW3, OUTPUT);
-//  pinMode(ROW1, OUTPUT);
-//  digitalWrite(ROW3, HIGH);
-//  digitalWrite(ROW1, LOW);
+  pinMode(ROW3, OUTPUT);
+  pinMode(ROW1, OUTPUT);
+  digitalWrite(ROW3, HIGH);
+  digitalWrite(ROW1, LOW);
 
 
-// D8 no worky
+// D8
 //  pinMode(ROW3, OUTPUT);
 //  pinMode(ROW2, OUTPUT);
 //  digitalWrite(ROW3, HIGH);
 //  digitalWrite(ROW2, LOW);
 
 
-// D9 no worky
+// D9
 //  pinMode(ROW3, OUTPUT);
 //  pinMode(ROW4, OUTPUT);
 //  digitalWrite(ROW3, HIGH);
 //  digitalWrite(ROW4, LOW);
+  
 
 
 // D10
@@ -114,11 +115,15 @@ void setup()
 //  digitalWrite(ROW2, LOW);
 
 
-//  // D12
+  // D12
 //  pinMode(ROW4, OUTPUT);
 //  pinMode(ROW3, OUTPUT);
 //  digitalWrite(ROW4, HIGH);
 //  digitalWrite(ROW3, LOW);  
+
+   
+//  pinMode(ROW3, OUTPUT);
+//  digitalWrite(ROW3, HIGH);
 }
 
 void loop()
