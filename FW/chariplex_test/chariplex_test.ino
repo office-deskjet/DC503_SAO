@@ -40,7 +40,7 @@ void loop()
   for (i = 0; i < 10; i++)
     random_led();
 */    
- for (i = 0; i < 3; i++)
+ //for (i = 0; i < 3; i++)
     cycle_led();
 }
 
@@ -70,7 +70,7 @@ void cycle_led()
     delay(SPEED);
     
     off_led(LED[i]);
-    delay(SPEED);  
+    //delay(SPEED);  
   }
 }
 

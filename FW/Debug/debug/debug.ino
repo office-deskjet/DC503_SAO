@@ -13,123 +13,17 @@
 
 #define NUMB_LEDS 12
 
-// array of all the LEDs in {ANODE,CATHODE} pairing
-char LED[NUMB_LEDS][2] = { {ROW1, ROW2}, {ROW1, ROW3}, {ROW1, ROW4},
-                           {ROW2, ROW1}, {ROW2, ROW3}, {ROW2, ROW4},
-                           {ROW3, ROW1}, {ROW3, ROW2}, {ROW3, ROW4},
-                           {ROW4, ROW1}, {ROW4, ROW2}, {ROW4, ROW3},
-};
-
 void setup()
 {
   all_off_led();
   
   pinMode(BUTTON, INPUT);
   randomSeed(analogRead(BUTTON));
-
-  // D1
-//  pinMode(ROW1, OUTPUT);
-//  pinMode(ROW2, OUTPUT);
-//  pinMode(ROW3, OUTPUT);
-//  digitalWrite(ROW1, HIGH);
-//  digitalWrite(ROW3, HIGH); // Make D2 off
-//  digitalWrite(ROW2, LOW);
-
-
-  
-  // D2
-//  pinMode(ROW1, OUTPUT);
-//  pinMode(ROW3, OUTPUT);
-//  digitalWrite(ROW1, HIGH);
-//  digitalWrite(ROW3, LOW);
-
-
-// D3
-//  pinMode(ROW1, OUTPUT);
-//  pinMode(ROW4, OUTPUT);
-//  pinMode(ROW3, OUTPUT);
-//  digitalWrite(ROW1, HIGH);
-//  digitalWrite(ROW3, HIGH); // Make D2 off
-//  digitalWrite(ROW4, LOW);
-
-
-  // D4
-//  pinMode(ROW2, OUTPUT);
-//  pinMode(ROW3, OUTPUT);
-//  pinMode(ROW1, OUTPUT);
-//  digitalWrite(ROW2, HIGH);
-//  digitalWrite(ROW3, HIGH); // Make D5 off
-//  digitalWrite(ROW1, LOW);
-  
- 
-  // D5
-//  pinMode(ROW2, OUTPUT);
-//  pinMode(ROW3, OUTPUT);
-//  digitalWrite(ROW2, HIGH);
-//  digitalWrite(ROW3, LOW);
-
-  // D6
-//  pinMode(ROW2, OUTPUT);
-//  pinMode(ROW3, OUTPUT);
-//  pinMode(ROW4, OUTPUT);
-//  digitalWrite(ROW2, HIGH);
-//  digitalWrite(ROW3, HIGH); // Make D5 off
-//  digitalWrite(ROW4, LOW);
-
-  // D7 no worky
-  pinMode(ROW3, OUTPUT);
-  pinMode(ROW1, OUTPUT);
-  digitalWrite(ROW3, HIGH);
-  digitalWrite(ROW1, LOW);
-
-
-// D8
-//  pinMode(ROW3, OUTPUT);
-//  pinMode(ROW2, OUTPUT);
-//  digitalWrite(ROW3, HIGH);
-//  digitalWrite(ROW2, LOW);
-
-
-// D9
-//  pinMode(ROW3, OUTPUT);
-//  pinMode(ROW4, OUTPUT);
-//  digitalWrite(ROW3, HIGH);
-//  digitalWrite(ROW4, LOW);
-  
-
-
-// D10
-//  pinMode(ROW4, OUTPUT);
-//  pinMode(ROW3, OUTPUT);
-//  pinMode(ROW1, OUTPUT);
-//  digitalWrite(ROW4, HIGH);
-//  digitalWrite(ROW3, HIGH); // Make D12 off
-//  digitalWrite(ROW1, LOW);
-
-  // D11
-//  pinMode(ROW4, OUTPUT);
-//  pinMode(ROW3, OUTPUT);
-//  pinMode(ROW2, OUTPUT);
-//  digitalWrite(ROW4, HIGH);
-//  digitalWrite(ROW3, HIGH); // Make D12 off
-//  digitalWrite(ROW2, LOW);
-
-
-  // D12
-//  pinMode(ROW4, OUTPUT);
-//  pinMode(ROW3, OUTPUT);
-//  digitalWrite(ROW4, HIGH);
-//  digitalWrite(ROW3, LOW);  
-
-   
-//  pinMode(ROW3, OUTPUT);
-//  digitalWrite(ROW3, HIGH);
 }
 
 void loop()
-{
-  
- 
+{  
+  cycle_led();
 }
 
 // turn off all LEDs
@@ -142,33 +36,16 @@ void all_off_led()
   pinMode(ROW4, INPUT);
   
 }
-// turn on a given LED, param is a an {ANODE,CATHODE} pair
-void on_led(char *LED)
-{
-  pinMode(LED[ANODE], OUTPUT);
-  pinMode(LED[CATHODE], OUTPUT);
-  
-  digitalWrite(LED[ANODE], HIGH);
-  digitalWrite(LED[CATHODE], LOW);
-}
 
-// turn off a given LED, param is a an {ANODE,CATHODE} pair
-void off_led(char *LED)
-{
-  pinMode(LED[ANODE], INPUT);
-  pinMode(LED[CATHODE], INPUT);
-}
 
 void cycle_led()
 {
   byte i;
  
   for (i = 0; i < NUMB_LEDS; i++) {
-    on_led(LED[i]);
+    on_led(i);
     delay(SPEED);
-    
-    off_led(LED[i]);
-    delay(SPEED);  
+    all_off_led();
   }
 }
 
@@ -176,11 +53,123 @@ void cycle_led()
 void random_led()
 {
   long rand_led = random(0, NUMB_LEDS);
+}
 
-  on_led(LED[rand_led]);
-  delay(SPEED);
-  
-  off_led(LED[rand_led]);
-  delay(SPEED);
+
+void on_led(byte led)
+{
+  switch (led) {
+    // D1
+    case 0:
+      pinMode(ROW1, OUTPUT);
+      pinMode(ROW2, OUTPUT);
+      pinMode(ROW3, OUTPUT);
+      digitalWrite(ROW1, HIGH);
+      digitalWrite(ROW3, HIGH); // Make D2 off
+      digitalWrite(ROW2, LOW);
+    break;
+    
+    //D2
+    case 1:
+      pinMode(ROW1, OUTPUT);
+      pinMode(ROW3, OUTPUT);
+      digitalWrite(ROW1, HIGH);
+      digitalWrite(ROW3, LOW);
+    break;
+    
+    // D3
+    case 2: 
+      pinMode(ROW1, OUTPUT);
+      pinMode(ROW4, OUTPUT);
+      pinMode(ROW3, OUTPUT);
+      digitalWrite(ROW1, HIGH);
+      digitalWrite(ROW3, HIGH); // Make D2 off
+      digitalWrite(ROW4, LOW);
+    break;
+    
+    // D4    
+    case 3:
+      pinMode(ROW2, OUTPUT);
+      pinMode(ROW3, OUTPUT);
+      pinMode(ROW1, OUTPUT);
+      digitalWrite(ROW2, HIGH);
+      digitalWrite(ROW3, HIGH); // Make D5 off
+      digitalWrite(ROW1, LOW);
+    break;
+    
+    // D5
+    case 4:
+      pinMode(ROW2, OUTPUT);
+      pinMode(ROW3, OUTPUT);
+      digitalWrite(ROW2, HIGH);
+      digitalWrite(ROW3, LOW);
+    break;
+
+    // D6
+    case 5:
+      pinMode(ROW2, OUTPUT);
+      pinMode(ROW3, OUTPUT);
+      pinMode(ROW4, OUTPUT);
+      digitalWrite(ROW2, HIGH);
+      digitalWrite(ROW3, HIGH); // Make D5 off
+      digitalWrite(ROW4, LOW);
+    break;
+    
+    // D7
+    case 6:
+      pinMode(ROW3, OUTPUT);
+      pinMode(ROW1, OUTPUT);
+      digitalWrite(ROW3, HIGH);
+      digitalWrite(ROW1, LOW);
+    break;
+
+    // D8
+    case 7:
+      pinMode(ROW3, OUTPUT);
+      pinMode(ROW2, OUTPUT);
+      digitalWrite(ROW3, HIGH);
+      digitalWrite(ROW2, LOW);
+    break;
+
+    // D9
+    case 8:
+      pinMode(ROW3, OUTPUT);
+      pinMode(ROW4, OUTPUT);
+      digitalWrite(ROW3, HIGH);
+      digitalWrite(ROW4, LOW);
+    break;
+    
+    //D10
+    case 9:
+      pinMode(ROW4, OUTPUT);
+      pinMode(ROW3, OUTPUT);
+      pinMode(ROW1, OUTPUT);
+      digitalWrite(ROW4, HIGH);
+      digitalWrite(ROW3, HIGH); // Make D12 off
+      digitalWrite(ROW1, LOW);
+    break;
+
+    // D11
+    case 10:
+      pinMode(ROW4, OUTPUT);
+      pinMode(ROW3, OUTPUT);
+      pinMode(ROW2, OUTPUT);
+      digitalWrite(ROW4, HIGH);
+      digitalWrite(ROW3, HIGH); // Make D12 off
+      digitalWrite(ROW2, LOW);
+    break;
+    
+    // D12
+    case 11:
+      pinMode(ROW4, OUTPUT);
+      pinMode(ROW3, OUTPUT);
+      digitalWrite(ROW4, HIGH);
+      digitalWrite(ROW3, LOW);  
+    break;
+    
+    default:
+      all_off_led();
+    break;
+  }
 }
 
