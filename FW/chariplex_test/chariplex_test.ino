@@ -36,11 +36,11 @@ void setup()
 void loop()
 {
   byte i = 0;
-/*
+
   for (i = 0; i < 10; i++)
     random_led();
-*/    
- //for (i = 0; i < 3; i++)
+   
+ for (i = 0; i < 3; i++)
     cycle_led();
 }
 
@@ -83,6 +83,6 @@ void random_led()
   delay(SPEED);
   
   off_led(LED[rand_led]);
-  delay(SPEED);
+  //delay(SPEED);
 }
 
