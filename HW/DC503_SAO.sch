@@ -207,7 +207,7 @@ U 1 1 5B4E7EF2
 P 7900 2560
 F 0 "X1" H 8000 2360 60  0000 C CNN
 F 1 "Badgelife_shitty_connector" H 8070 2880 60  0000 C CNN
-F 2 "SAO:Badgelife-Shitty-2x2" H 7900 2560 60  0001 C CNN
+F 2 "DC503_SAO:Badgelife-Shitty-2x2" H 7900 2560 60  0001 C CNN
 F 3 "" H 7900 2560 60  0001 C CNN
 	1    7900 2560
 	1    0    0    -1  
