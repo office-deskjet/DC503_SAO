@@ -1,14 +1,13 @@
-EESchema-LIBRARY Version 2.3
+EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# +3V3
+# DC503_SAO-rescue:+3.3V
 #
-DEF +3V3 #PWR 0 0 Y Y 1 F P
+DEF DC503_SAO-rescue:+3.3V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "+3V3" 0 140 50 H V C CNN
+F1 "DC503_SAO-rescue:+3.3V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
-ALIAS +3.3V
 DRAW
 P 2 0 1 0 -30 50 0 100 N
 P 2 0 1 0 0 0 0 100 N
@@ -17,11 +16,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# 1825910-6
+# DC503_SAO-rescue:1825910-6
 #
-DEF 1825910-6 S 0 40 Y Y 1 F N
+DEF DC503_SAO-rescue:1825910-6 S 0 40 Y Y 1 F N
 F0 "S" 0 180 60 H V C CNN
-F1 "1825910-6" 5 -200 60 H V C CNN
+F1 "DC503_SAO-rescue:1825910-6" 5 -200 60 H V C CNN
 F2 "digikey-footprints:Switch_Tactile_THT_6x6mm" 200 200 60 H I L CNN
 F3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" 200 300 60 H I L CNN
 F4 "450-1650-ND" 200 400 60 H I L CNN "Digi-Key_PN"
@@ -50,14 +49,13 @@ X ~ 4 200 -100 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ATTINY25-20SU
+# DC503_SAO-rescue:ATTINY85-20SU
 #
-DEF ATTINY25-20SU U 0 40 Y Y 1 F N
+DEF DC503_SAO-rescue:ATTINY85-20SU U 0 40 Y Y 1 F N
 F0 "U" -1150 400 50 H V C CNN
-F1 "ATTINY25-20SU" 1000 -400 50 H V C CNN
+F1 "DC503_SAO-rescue:ATTINY85-20SU" 1000 -400 50 H V C CNN
 F2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" 950 0 50 H I C CIN
 F3 "" 0 0 50 H I C CNN
-ALIAS ATTINY45-20SU ATTINY85-20SU
 DRAW
 S -1200 350 1200 -350 0 1 10 f
 X PB5(~RESET~/dW/ADC0/PCINT5) 1 -1350 -250 150 R 40 40 1 1 B
@@ -71,11 +69,11 @@ X VCC 8 1350 250 150 L 40 40 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Badgelife_shitty_connector
+# DC503_SAO-rescue:Badgelife_shitty_connector
 #
-DEF Badgelife_shitty_connector X 0 40 Y Y 1 F N
+DEF DC503_SAO-rescue:Badgelife_shitty_connector X 0 40 Y Y 1 F N
 F0 "X" 100 -200 60 H V C CNN
-F1 "Badgelife_shitty_connector" 0 400 60 H V C CNN
+F1 "DC503_SAO-rescue:Badgelife_shitty_connector" 0 400 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -87,11 +85,11 @@ X SDA 4 550 100 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# GND
+# DC503_SAO-rescue:GND
 #
-DEF GND #PWR 0 0 Y Y 1 F P
+DEF DC503_SAO-rescue:GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "GND" 0 -150 50 H V C CNN
+F1 "DC503_SAO-rescue:GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -100,11 +98,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# GS2
+# DC503_SAO-rescue:GS2
 #
-DEF GS2 J 0 40 N N 1 F N
+DEF DC503_SAO-rescue:GS2 J 0 40 N N 1 F N
 F0 "J" 100 150 50 H V C CNN
-F1 "GS2" 100 -149 50 H V C CNN
+F1 "DC503_SAO-rescue:GS2" 100 -149 50 H V C CNN
 F2 "Connectors:GS2" 74 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -118,11 +116,11 @@ X G2 2 0 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# LED
+# DC503_SAO-rescue:LED
 #
-DEF LED D 0 40 Y N 1 F N
+DEF DC503_SAO-rescue:LED D 0 40 Y N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "LED" 0 -100 50 H V C CNN
+F1 "DC503_SAO-rescue:LED" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -139,11 +137,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# R
+# DC503_SAO-rescue:R
 #
-DEF R R 0 0 N Y 1 F N
+DEF DC503_SAO-rescue:R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "R" 0 0 50 V V C CNN
+F1 "DC503_SAO-rescue:R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
